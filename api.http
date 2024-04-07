@@ -1,0 +1,33 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title" : "Unite",
+    "details": "Um evento para quem é apaixonado por programação",
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/5dc0efd4-46cc-41d1-ba7b-08b3de331d20/attendees
+Content-Type: application/json
+
+{
+  "name": "Diego",
+  "email": "diego@email.com.br"
+}
+
+###
+
+GET http://localhost:3333/events/5dc0efd4-46cc-41d1-ba7b-08b3de331d20
+
+###
+
+GET http://localhost:3333/attendees/2/badge
+###
+
+GET http://localhost:3333/attendees/1/check-in
+
+###
+
+GET http://localhost:3333/events/c5036ebd-119e-4e8c-8f98-70c0bf4a1b4a/attendees?query=jO
